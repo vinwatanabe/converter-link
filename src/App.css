@@ -1,38 +1,201 @@
-.App {
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+.bgImage {
+  background: url(https://source.unsplash.com/collection/1136512/1920x1470) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bgLayer {
+  background: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.main {
+  position: absolute;
+  width: 50%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main h1 {
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main input {
+  width: 70%;
+  height: 50px;
+  padding: 0 30px;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input {
+  outline: none;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 10px 30px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #E13D31;
+  border: 1px solid #E13D31;
+}
+
+.main button {
+  margin: 0 10px;
+}
+
+.credits {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  color: white;
+  bottom: 5%;
+  left: 5%;
+}
+
+.credits p {
+  margin: 5px;
+}
+
+.credits a {
+  color: white;
+  text-decoration: none;
+}
+
+.credits a:hover {
+  color: #E13D31;
+  text-decoration: underline;
+}
+
+/* LightBox */
+
+.lightbox {
+  position: absolute;
+  opacity: 0;
+  visibility: collapse;
+  min-width: 40%;
+  background-color: white;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px 40px;
+  transition: opacity 0.7s, top 0.7s, visibility 0.7s;
+}
+
+.lightbox h2, p {
+  margin: 0;
+}
+
+.lightbox h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #E13D31;
+  margin-bottom: 10px;
+}
+
+.lightbox:last-child  h2 {
+  margin-bottom: 25px;
+}
+
+.lightbox.isActive {
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.outputLink {
+  background: #EAEAEA;
+  width: auto;
+  padding: 20px 20px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+
+.outputLink p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btnCopy {
+  border: 1px solid #E13D31;
+  color: #E13D31;
+}
+
+.btnCopy:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btnClose {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnClose img {
+  width: 20px;
+}
+
+.alert {
+  position: absolute;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  border-radius: 50px;
+  padding: 15px 20px;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0;
+  visibility: collapse;
+  transition: opacity 0.7s, visibility 0.7s;
+}
+
+.alert.isActive {
+  opacity: 1;
+  visibility: visible;
 }
