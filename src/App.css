@@ -45,7 +45,7 @@ h1 {
 }
 
 .main input {
-  width: 70%;
+  width: 90%;
   height: 50px;
   padding: 0 30px;
   border: none;
@@ -113,7 +113,7 @@ button:hover{
   opacity: 0;
   visibility: collapse;
   min-width: 40%;
-  max-width: 60%; /* added */
+  max-width: 60%;
   background-color: white;
   text-align: center;
   top: 60%;
@@ -207,4 +207,60 @@ button:hover{
 .alert.isActive {
   opacity: 1;
   visibility: visible;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 1020px) {
+  .main {
+    width: 65%;
+  }
+
+  .main h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+
+  .lightbox {
+    max-width: 85%;
+    min-width: 75%;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .bgImage {
+    background: url(https://source.unsplash.com/collection/1136512/1080x1920) no-repeat;
+  }
+
+  .main {
+    width: 80%;
+  }
+
+  .main h1 {
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+
+  .main button {
+    margin: 0 0 8px 0;
+  }
+
+  .lightbox {
+    max-width: 85%;
+    min-width: 75%;
+  }
+
+  .lightbox h2 {
+    font-size: 32px;
+  }
+
+  .alert {
+    font-size: 12px;
+    width: 70%;
+  }
+
+  .credits {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 }
