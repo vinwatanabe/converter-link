@@ -6,7 +6,12 @@ class CloseButton extends React.Component {
     super(props);
 
     this.closeClick = this.closeClick.bind(this);
+    this.closeKey = this.closeKey.bind(this);
     this.closeLightbox = this.closeLightbox.bind(this);
+  }
+
+  componentWillMount() {
+    this.closeKey();
   }
 
   closeLightbox() {
@@ -22,6 +27,14 @@ class CloseButton extends React.Component {
     event.preventDefault();
 
     this.closeLightbox();
+  }
+
+  closeKey(event) {
+    document.addEventListener("keydown", event => {
+      if (event.keyCode === 27) {
+        this.closeLightbox();
+      }
+    });
   }
 
   render() {
