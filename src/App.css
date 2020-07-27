@@ -113,6 +113,7 @@ button:hover{
   opacity: 0;
   visibility: collapse;
   min-width: 40%;
+  max-width: 60%; /* added */
   background-color: white;
   text-align: center;
   top: 65%;
@@ -147,9 +148,17 @@ button:hover{
 .outputLink {
   background: #EAEAEA;
   width: auto;
+  max-width: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   padding: 20px 20px;
   border-radius: 50px;
   margin-bottom: 30px;
+}
+
+.outputLink::-webkit-scrollbar {
+  display: none;
 }
 
 .outputLink p {
