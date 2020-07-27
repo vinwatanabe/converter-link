@@ -2,15 +2,14 @@ import React from "react";
 import btnClose from "./../img/btnClose.svg";
 
 class CloseButton extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
+    this.closeClick = this.closeClick.bind(this);
     this.closeLightbox = this.closeLightbox.bind(this);
   }
 
-  closeLightbox(event) {
-    event.preventDefault();
-
+  closeLightbox() {
     const inputField = document.getElementsByClassName("inputField")[0];
     inputField.value = "";
     inputField.focus();
@@ -19,13 +18,19 @@ class CloseButton extends React.Component {
     lightbox.classList.remove("isActive");
   }
 
+  closeClick(event) {
+    event.preventDefault();
+
+    this.closeLightbox();
+  }
+
   render() {
     return (
       <div className="btnClose">
         <img
           src={btnClose}
           alt={this.props.alt}
-          onClick={this.closeLightbox}
+          onClick={this.closeClick}
         />
       </div>
     );
