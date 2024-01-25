@@ -3,6 +3,7 @@
 Converter Link is a practical solution developed to address the compatibility challenges encountered between Macintosh and Windows computers within an advertising agency environment. The project aims to streamline link formatting discrepancies arising from differing folder separators utilized by the two operating systems. By providing a user-friendly script and web interface, Converter Link facilitates the seamless conversion of links, ensuring uniformity and enhancing cross-team collaboration.
 
 ## Technologies
+- React
 - HTML
 - CSS
 - Javascript
