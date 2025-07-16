@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
 
 class Credits extends React.Component {
   render() {
     return (
-      <div className="credits">
+      <div className='credits'>
         <p>
-          <a href="https://unsplash.com/">Fotografia | Unsplash</a>
+          <a href='https://picsum.photos/' target='blank'>
+            Fotografia | PicSum
+          </a>
         </p>
       </div>
     );

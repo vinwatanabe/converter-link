@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -15,7 +15,7 @@ h1 {
 }
 
 .bgImage {
-  background: url(https://source.unsplash.com/collection/1136512/1920x1470) no-repeat;
+  background: url(https://picsum.photos/seed/mountain/1920) no-repeat;
   background-size: cover;
   height: 100vh;
 }
@@ -30,7 +30,7 @@ h1 {
 .main {
   position: absolute;
   width: 50%;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   font-weight: 700;
   color: white;
@@ -73,9 +73,9 @@ button {
   cursor: pointer;
 }
 
-button:hover{
-  background-color: #E13D31;
-  border: 1px solid #E13D31;
+button:hover {
+  background-color: #e13d31;
+  border: 1px solid #e13d31;
 }
 
 .main button {
@@ -102,7 +102,7 @@ button:hover{
 }
 
 .credits a:hover {
-  color: #E13D31;
+  color: #e13d31;
   text-decoration: underline;
 }
 
@@ -123,19 +123,20 @@ button:hover{
   transition: opacity 0.7s, top 0.7s, visibility 0.7s;
 }
 
-.lightbox h2, p {
+.lightbox h2,
+p {
   margin: 0;
 }
 
 .lightbox h2 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 40px;
-  color: #E13D31;
+  color: #e13d31;
   margin-bottom: 10px;
 }
 
-.lightbox:last-child  h2 {
+.lightbox:last-child h2 {
   margin-bottom: 25px;
 }
 
@@ -146,7 +147,7 @@ button:hover{
 }
 
 .outputLink {
-  background: #EAEAEA;
+  background: #eaeaea;
   width: auto;
   max-width: 100%;
   overflow: auto;
@@ -168,8 +169,8 @@ button:hover{
 }
 
 .btnCopy {
-  border: 1px solid #E13D31;
-  color: #E13D31;
+  border: 1px solid #e13d31;
+  color: #e13d31;
 }
 
 .btnCopy:hover {
@@ -229,7 +230,7 @@ button:hover{
 
 @media only screen and (max-width: 426px) {
   .bgImage {
-    background: url(https://source.unsplash.com/collection/1136512/1080x1920) no-repeat;
+    background: url(https://picsum.photos/seed/mountain/1920) no-repeat;
   }
 
   .main {
